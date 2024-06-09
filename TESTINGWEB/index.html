@@ -3,37 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEST WEB</title>
+    <title>TEST WEBSITE</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Hi!</h1>
-        <p>Please choose your favorite flower:</p>
+        <p>Please pick a flower:</p>
         <div class="flower-selection">
-            <button class="flower-button" onclick="selectFlower('rose')">
+            <div class="flower-button" onclick="selectFlower('rose')">
                 <img src="images/rose.jpeg" alt="Rose">
                 <p>Rose</p>
-            </button>
-            <button class="flower-button" onclick="selectFlower('tulip')">
+            </div>
+            <div class="flower-button" onclick="selectFlower('tulip')">
                 <img src="images/tulip.jpeg" alt="Tulip">
                 <p>Tulip</p>
-            </button>
-            <button class="flower-button" onclick="selectFlower('lavender')">
+            </div>
+            <div class="flower-button" onclick="selectFlower('lavender')">
                 <img src="images/lavender.jpeg" alt="Lavender">
                 <p>Lavender</p>
-            </button>
+            </div>
         </div>
         <div id="emotion-section" style="display: none;">
             <p>How are you feeling?</p>
-            <button class="emotion-button" onclick="selectEmotion('angry')">Angry</button>
-            <button class="emotion-button" onclick="selectEmotion('sad')">Sad</button>
-            <button class="emotion-button" onclick="selectEmotion('lonely')">Lonely</button>
-            <button class="emotion-button" onclick="selectEmotion('happy')">Happy</button>
+            <div class="emotion-button" onclick="selectEmotion('angry')">
+                <span>&#128545;</span>
+                <p>Angry</p>
+            </div>
+            <div class="emotion-button" onclick="selectEmotion('sad')">
+                <span>&#128546;</span>
+                <p>Sad</p>
+            </div>
+            <div class="emotion-button" onclick="selectEmotion('lonely')">
+                <span>&#128550;</span>
+                <p>Lonely</p>
+            </div>
+            <div class="emotion-button" onclick="selectEmotion('happy')">
+                <span>&#128512;</span>
+                <p>Happy</p>
+            </div>
         </div>
         <div id="result-section" style="display: none;">
-            <img id="selected-flower" src="" alt="Selected Flower">
+            <h1 class="title">PLS TAKE CARE OF YOURSELF <span>&#10084;&#65039;</span></h1>
+            <img id="result-image" src="" alt="Result Flower">
             <p id="quote"></p>
+            <div class="design-images">
+                <img class="cute-pic" src="cute-pic-1.jpg" alt="Cute Pic 1">
+                <img class="cute-pic" src="cute-pic-2.jpg" alt="Cute Pic 2">
+                <img class="cute-pic" src="cute-pic-3.jpg" alt="Cute Pic 3">
+                <img class="cute-pic" src="cute-pic-4.jpg" alt="Cute Pic 4">
+            </div>
         </div>
     </div>
     <script src="scripts.js"></script>
