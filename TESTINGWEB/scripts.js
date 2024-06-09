@@ -7,18 +7,7 @@ function selectFlower(flower) {
 }
 
 function selectEmotion(emotion) {
-    const quotes = {
-        angry: ['Kanino ka galit? Sasakalin natin sila!', 'Yaan mo sila, di natin sila bati.', 'Sumbong mo saken, yari yan.'],
-        sad: ['Ice cream is key.', 'Wawawa ulit. AHAHAH', 'Read?'],
-        lonely: ['Binge watch >>', 'Ihh wawawa', 'Talk to someone??'],
-        happy: ['Keep on Smiling :)', 'Yieeee', 'Luh happy']
-    };
-
-    // Get a random index for the selected emotion
-    const randomIndex = Math.floor(Math.random() * quotes[emotion].length);
-
-    // Set the text content of the quote element to a random quote
-    document.getElementById('quote').textContent = quotes[emotion][randomIndex];
+    // Other code for selecting emotion...
 
     // Set the src attribute of the result image based on the selected flower
     if (selectedFlower === 'forgetmenot') {
@@ -26,7 +15,7 @@ function selectEmotion(emotion) {
     } else if (selectedFlower === 'tulip') {
         document.getElementById('result-image').src = 'images/tulip-result.jpeg';
     } else if (selectedFlower === 'buttercups') {
-        document.getElementById('result-image').src = 'images/buttercup.jpeg'; // Change the image filename here
+        document.getElementById('result-image').src = 'images/buttercups-result.jpeg';
     }
 
     document.getElementById('emotion-section').style.display = 'none';
@@ -35,9 +24,9 @@ function selectEmotion(emotion) {
 
 function goToFlowerPage() {
     const flowerPages = {
-        forgetmenot: 'flowers/lavender/index.html',
+        forgetmenot: 'flowers/rose/index.html',
         tulip: 'flowers/tulip/index.html',
-        buttercups: 'flowers/rose/index.html'
+        buttercups: 'flowers/lavender/index.html'
     };
     window.location.href = flowerPages[selectedFlower];
 }
