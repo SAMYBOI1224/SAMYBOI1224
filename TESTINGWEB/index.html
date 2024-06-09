@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST WEB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hi!</h1>
+        <p>Please choose your favorite flower:</p>
+        <div class="flower-selection">
+            <button class="flower-button" onclick="selectFlower('rose')">
+                <img src="images/rose.jpeg" alt="Rose">
+                <p>Rose</p>
+            </button>
+            <button class="flower-button" onclick="selectFlower('tulip')">
+                <img src="images/tulip.jpeg" alt="Tulip">
+                <p>Tulip</p>
+            </button>
+            <button class="flower-button" onclick="selectFlower('lavender')">
+                <img src="images/lavender.jpeg" alt="Lavender">
+                <p>Lavender</p>
+            </button>
+        </div>
+        <div id="emotion-section" style="display: none;">
+            <p>How are you feeling?</p>
+            <button class="emotion-button" onclick="selectEmotion('angry')">Angry</button>
+            <button class="emotion-button" onclick="selectEmotion('sad')">Sad</button>
+            <button class="emotion-button" onclick="selectEmotion('lonely')">Lonely</button>
+            <button class="emotion-button" onclick="selectEmotion('happy')">Happy</button>
+        </div>
+        <div id="result-section" style="display: none;">
+            <img id="selected-flower" src="" alt="Selected Flower">
+            <p id="quote"></p>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>

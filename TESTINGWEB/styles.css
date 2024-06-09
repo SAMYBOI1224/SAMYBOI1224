@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #ff6f61;
+}
+
+.flower-selection, .emotion-selection {
+    margin: 20px 0;
+}
+
+.flower-button, .emotion-button {
+    background-color: #fff;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    transition: transform 0.3s;
+}
+
+.flower-button img {
+    width: 200px; /* Increase the size of the flower images */
+    height: 200px;
+    border-radius: 10px;
+}
+
+.flower-button p {
+    margin: 10px 0 0 0; /* Adjust spacing for the flower names */
+}
+
+.flower-button:hover, .emotion-button:hover {
+    transform: scale(1.1);
+}
+
+#selected-flower {
+    width: 300px; /* Increase the size of the selected flower */
+    height: 300px;
+    margin: 20px 0;
+}
+
+#quote {
+    font-size: 1.2em;
+    color: #333;
+}
+
+@keyframes waterpaint {
+    0% { background-color: rgba(255, 255, 255, 0.0); }
+    50% { background-color: rgba(255, 255, 255, 0.7); }
+    100% { background-color: rgba(255, 255, 255, 0.0); }
+}
+
+body {
+    animation: waterpaint 3s infinite;
+}
+
+/* Ensure buttons are clickable */
+button {
+    pointer-events: auto;
+}
