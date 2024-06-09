@@ -15,9 +15,9 @@ function selectEmotion(emotion) {
     };
 
     const flowerImagesNew = {
-        rose: 'images/rose-result.jpg',
-        tulip: 'images/tulip-result.jpg',
-        lavender: 'images/lavender-result.jpg'
+        rose: 'images/rose-result.jpeg',
+        tulip: 'images/tulip-result.jpeg',
+        lavender: 'images/lavender-result.jpeg'
     };
 
     const randomIndex = Math.floor(Math.random() * quotes[emotion].length);
@@ -29,8 +29,12 @@ function selectEmotion(emotion) {
     // Change the displayed image based on the selected flower
     document.getElementById('result-image').src = flowerImagesNew[selectedFlower];
 }
-function redirectToFlowerPage() {
-    if (selectedFlower) {
-        window.location.href = 'flowers/' + selectedFlower + '/index.html';
-    }
+
+function goToFlowerPage() {
+    const flowerPages = {
+        rose: 'flowers/rose/index.html',
+        tulip: 'flowers/tulip/index.html',
+        lavender: 'flowers/lavender/index.html'
+    };
+    window.location.href = flowerPages[selectedFlower];
 }
