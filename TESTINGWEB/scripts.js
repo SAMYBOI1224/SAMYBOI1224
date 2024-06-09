@@ -7,7 +7,18 @@ function selectFlower(flower) {
 }
 
 function selectEmotion(emotion) {
-    // Other code for selecting emotion...
+    const quotes = {
+        angry: ['Kanino ka galit? Sasakalin natin sila!', 'Yaan mo sila, di natin sila bati.', 'Sumbong mo saken, yari yan.'],
+        sad: ['Ice cream is key.', 'Wawawa ulit. AHAHAH', 'Read?'],
+        lonely: ['Binge watch >>', 'Ihh wawawa', 'Talk to someone??'],
+        happy: ['Keep on Smiling :)', 'Yieeee', 'Luh happy']
+    };
+
+    // Get a random index for the selected emotion
+    const randomIndex = Math.floor(Math.random() * quotes[emotion].length);
+
+    // Set the text content of the quote element to a random quote
+    document.getElementById('quote').textContent = quotes[emotion][randomIndex];
 
     // Set the src attribute of the result image based on the selected flower
     if (selectedFlower === 'forgetmenot') {
