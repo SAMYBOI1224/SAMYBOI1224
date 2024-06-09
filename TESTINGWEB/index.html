@@ -11,15 +11,15 @@
         <p>Please pick a flower:</p>
         <div class="flower-selection">
             <div class="flower-button" onclick="selectFlower('rose')">
-                <img src="images/rose.jpeg" alt="Rose">
+                <img src="images/rose.jpg" alt="Rose">
                 <p>Rose</p>
             </div>
             <div class="flower-button" onclick="selectFlower('tulip')">
-                <img src="images/tulip.jpeg" alt="Tulip">
+                <img src="images/tulip.jpg" alt="Tulip">
                 <p>Tulip</p>
             </div>
             <div class="flower-button" onclick="selectFlower('lavender')">
-                <img src="images/lavender.jpeg" alt="Lavender">
+                <img src="images/lavender.jpg" alt="Lavender">
                 <p>Lavender</p>
             </div>
         </div>
@@ -57,3 +57,29 @@
     <script src="scripts.js"></script>
 </body>
 </html>
+<div id="result-section" style="display: none;">
+    <h1 class="title">PLS TAKE CARE OF YOURSELF <span>&#10084;&#65039;</span></h1>
+    <p>Please click the flower</p>
+    <img id="result-image" src="" alt="Result Flower" onclick="redirectToFlowerPage()">
+    <p id="quote"></p>
+    <div class="design-images">
+        <img class="cute-pic" src="cute-pic-1.jpg" alt="Cute Pic 1">
+        <img class="cute-pic" src="cute-pic-2.jpg" alt="Cute Pic 2">
+        <img class="cute-pic" src="cute-pic-3.jpg" alt="Cute Pic 3">
+        <img class="cute-pic" src="cute-pic-4.jpg" alt="Cute Pic 4">
+    </div>
+</div>
+<div id="result-section" style="display: none;">
+    <h1 class="title">PLS TAKE CARE OF YOURSELF <span>&#10084;&#65039;</span></h1>
+    <p>Please click the flower</p>
+    <div class="flower-button" onclick="redirectToFlowerPage()">
+        <img id="result-image" src="" alt="Result Flower">
+    </div>
+    <p id="quote"></p>
+    <div class="design-images">
+        <img class="cute-pic" src="cute-pic-1.jpg" alt="Cute Pic 1">
+        <img class="cute-pic" src="cute-pic-2.jpg" alt="Cute Pic 2">
+        <img class="cute-pic" src="cute-pic-3.jpg" alt="Cute Pic 3">
+        <img class="cute-pic" src="cute-pic-4.jpg" alt="Cute Pic 4">
+    </div>
+</div>
