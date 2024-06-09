@@ -24,7 +24,7 @@ body {
     flex-wrap: wrap;
 }
 
-.flower-button, .emotion-button {
+.flower-button, .emotion-button, .result-flower {
     background-color: #fff;
     border: 2px solid #ff6f61;
     border-radius: 10px;
@@ -34,7 +34,7 @@ body {
     transition: transform 0.3s;
 }
 
-.flower-button img {
+.flower-button img, .result-flower img {
     width: 200px;
     height: 200px;
     border-radius: 10px;
@@ -42,18 +42,12 @@ body {
     margin-bottom: 10px;
 }
 
-.flower-button p {
+.flower-button p, .result-flower p {
     margin: 10px 0 0 0;
 }
 
-.flower-button:hover, .emotion-button:hover {
+.flower-button:hover, .emotion-button:hover, .result-flower:hover {
     transform: scale(1.1);
-}
-
-#result-image {
-    width: 300px;
-    height: 300px;
-    margin: 20px auto;
 }
 
 #quote {
@@ -94,35 +88,4 @@ body {
     top: 55%;
     left: 10px;
     transform: translateY(-183%);
-}
-.flower-button {
-    display: inline-block;
-    position: relative;
-}
-
-.flower-button img {
-    width: 300px;
-    height: 300px;
-    border-radius: 10px;
-}
-
-.flower-button p {
-    margin: 10px 0 0 0;
-}
-
-.flower-button:hover {
-    transform: scale(1.1);
-}
-
-.flower-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 2px solid #ff69b4;
-    border-radius: 10px;
-    pointer-events: none; /* Ensures the box doesn't interfere with click events */
-    box-sizing: border-box;
 }
