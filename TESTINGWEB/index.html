@@ -10,17 +10,17 @@
     <div class="container">
         <p>Please pick a flower:</p>
         <div class="flower-selection">
-            <div class="flower-button" onclick="selectFlower('rose')">
-                <img src="images/rose.jpeg" alt="Rose">
-                <p>Rose</p>
+            <div class="flower-button" onclick="selectFlower('forgetmenot')">
+                <img src="images/forgetmenot.jpeg" alt="Forget Me Not">
+                <p>Forget Me Not</p>
             </div>
             <div class="flower-button" onclick="selectFlower('tulip')">
                 <img src="images/tulip.jpeg" alt="Tulip">
                 <p>Tulip</p>
             </div>
-            <div class="flower-button" onclick="selectFlower('lavender')">
-                <img src="images/lavender.jpeg" alt="Lavender">
-                <p>Lavender</p>
+            <div class="flower-button" onclick="selectFlower('buttercups')">
+                <img src="images/buttercups.jpeg" alt="Buttercups">
+                <p>Buttercups</p>
             </div>
         </div>
         <div id="emotion-section" style="display: none;">
@@ -57,6 +57,61 @@
             </div>
         </div>
     </div>
-    <script src="scripts.js"></script>
+
+    <script>
+        function selectFlower(flower) {
+            let flowerImage;
+            let flowerPage;
+            switch(flower) {
+                case 'forgetmenot':
+                    flowerImage = 'images/forgetmenot-result.jpeg';
+                    flowerPage = 'flowers/forgetmenot/index.html';
+                    break;
+                case 'tulip':
+                    flowerImage = 'images/tulip-result.jpeg';
+                    flowerPage = 'flowers/tulip/index.html';
+                    break;
+                case 'buttercups':
+                    flowerImage = 'images/buttercups-result.jpeg';
+                    flowerPage = 'flowers/buttercups/index.html';
+                    break;
+                default:
+                    flowerImage = '';
+                    flowerPage = '';
+            }
+            document.getElementById('result-image').src = flowerImage;
+            document.getElementById('result-image').setAttribute('data-page', flowerPage);
+            document.getElementById('emotion-section').style.display = 'block';
+        }
+
+        function selectEmotion(emotion) {
+            let quote;
+            switch(emotion) {
+                case 'angry':
+                    quote = 'Take a deep breath and relax.';
+                    break;
+                case 'sad':
+                    quote = 'It’s okay to feel sad. Things will get better.';
+                    break;
+                case 'lonely':
+                    quote = 'You are not alone. Reach out to someone you trust.';
+                    break;
+                case 'happy':
+                    quote = 'Keep smiling and enjoy the moment!';
+                    break;
+                default:
+                    quote = '';
+            }
+            document.getElementById('quote').innerText = quote;
+            document.getElementById('result-section').style.display = 'block';
+        }
+
+        function goToFlowerPage() {
+            const flowerPage = document.getElementById('result-image').getAttribute('data-page');
+            if (flowerPage) {
+                window.location.href = flowerPage;
+            }
+        }
+    </script>
 </body>
 </html>
