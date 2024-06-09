@@ -7,19 +7,27 @@ function selectFlower(flower) {
 }
 
 function selectEmotion(emotion) {
-    // Other code for selecting emotion...
+    const quotes = {
+        angry: ['Kanino ka galit? Sasakalin natin sila!', 'Yaan mo sila, di natin sila bati.', 'Sumbong mo saken, yari yan.'],
+        sad: ['Ice cream is key.', 'Wawawa ulit. AHAHAH', 'Read?'],
+        lonely: ['Binge watch >>', 'Ihh wawawa', 'Talk to someone??'],
+        happy: ['Keep on Smiling :)', 'Yieeee', 'Luh happy']
+    };
 
-    // Set the src attribute of the result image based on the selected flower
-    if (selectedFlower === 'forgetmenot') {
-        document.getElementById('result-image').src = 'images/forgetmenot-result.jpeg';
-    } else if (selectedFlower === 'tulip') {
-        document.getElementById('result-image').src = 'images/tulip-result.jpeg';
-    } else if (selectedFlower === 'buttercups') {
-        document.getElementById('result-image').src = 'images/buttercups-result.jpeg';
-    }
+    const flowerImagesNew = {
+        forgetmenot: 'images/forgetmenot-result.jpeg',
+        tulip: 'images/tulip-result.jpeg',
+        buttercups: 'images/buttercups-result.jpeg'
+    };
+
+    const randomIndex = Math.floor(Math.random() * quotes[emotion].length);
 
     document.getElementById('emotion-section').style.display = 'none';
+    document.getElementById('quote').textContent = quotes[emotion][randomIndex];
     document.getElementById('result-section').style.display = 'block';
+
+    // Change the displayed image based on the selected flower
+    document.getElementById('result-image').src = flowerImagesNew[selectedFlower];
 }
 
 function goToFlowerPage() {
