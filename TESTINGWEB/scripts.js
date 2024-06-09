@@ -15,9 +15,9 @@ function selectEmotion(emotion) {
     };
 
     const flowerImagesNew = {
-        rose: 'images/forgetmenot-result.jpeg',
-        tulip: 'images/tulip-result.jpeg',
-        lavender: 'images/buttercups-result.jpeg'
+        forgetmenot: 'images/forgetmenot.jpeg',
+        tulip: 'images/tulip.jpeg',
+        buttercups: 'images/lavender.jpeg'
     };
 
     const randomIndex = Math.floor(Math.random() * quotes[emotion].length);
@@ -32,9 +32,9 @@ function selectEmotion(emotion) {
 
 function goToFlowerPage() {
     const flowerPages = {
-        rose: 'flowers/rose/index.html',
+        forgetmenot: 'flowers/rose/index.html',
         tulip: 'flowers/tulip/index.html',
-        lavender: 'flowers/lavender/index.html'
+        buttercups: 'flowers/lavender/index.html'
     };
     window.location.href = flowerPages[selectedFlower];
 }
