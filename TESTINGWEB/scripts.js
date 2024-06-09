@@ -32,9 +32,9 @@ function selectEmotion(emotion) {
 
 function goToFlowerPage() {
     const flowerPages = {
-        rose: 'flowers/rose/index.html',
+        rose: 'flowers/forgetmenot/index.html',
         tulip: 'flowers/tulip/index.html',
-        lavender: 'flowers/lavender/index.html'
+        lavender: 'flowers/buttercups/index.html'
     };
     window.location.href = flowerPages[selectedFlower];
 }
