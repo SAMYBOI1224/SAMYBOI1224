@@ -95,3 +95,34 @@ body {
     left: 10px;
     transform: translateY(-183%);
 }
+.flower-button {
+    display: inline-block;
+    position: relative;
+}
+
+.flower-button img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.flower-button p {
+    margin: 10px 0 0 0;
+}
+
+.flower-button:hover {
+    transform: scale(1.1);
+}
+
+.flower-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    pointer-events: none; /* Ensures the box doesn't interfere with click events */
+    box-sizing: border-box;
+}
