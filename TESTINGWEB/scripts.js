@@ -15,9 +15,9 @@ function selectEmotion(emotion) {
     };
 
     const flowerImagesNew = {
-        rose: 'images/rose-result.jpg',
-        tulip: 'images/tulip-result.jpg',
-        lavender: 'images/lavender-result.jpg'
+        rose: 'images/rose-result.jpeg',
+        tulip: 'images/tulip-result.jpeg',
+        lavender: 'images/lavender-result.jpeg'
     };
 
     const randomIndex = Math.floor(Math.random() * quotes[emotion].length);
@@ -29,3 +29,8 @@ function selectEmotion(emotion) {
     // Change the displayed image based on the selected flower
     document.getElementById('result-image').src = flowerImagesNew[selectedFlower];
 }
+
+// Redirect to the respective flower's page on clicking the result flower
+document.getElementById('result-image').addEventListener('click', function() {
+    window.location.href = 'flowers/' + selectedFlower + '/index.html';
+});
