@@ -15,7 +15,7 @@ function selectEmotion(emotion) {
     } else if (selectedFlower === 'tulip') {
         document.getElementById('result-image').src = 'images/tulip-result.jpeg';
     } else if (selectedFlower === 'buttercups') {
-        document.getElementById('result-image').src = 'images/buttercups-result.jpeg';
+        document.getElementById('result-image').src = 'images/buttercup.jpeg'; // Change the image filename here
     }
 
     document.getElementById('emotion-section').style.display = 'none';
