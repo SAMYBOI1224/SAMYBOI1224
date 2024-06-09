@@ -15,9 +15,9 @@ function selectEmotion(emotion) {
     };
 
     const flowerImagesNew = {
-        rose: 'images/rose-result.jpeg',
+        rose: 'images/forgetmenot-result.jpeg',
         tulip: 'images/tulip-result.jpeg',
-        lavender: 'images/lavender-result.jpeg'
+        lavender: 'images/buttercups-result.jpeg'
     };
 
     const randomIndex = Math.floor(Math.random() * quotes[emotion].length);
